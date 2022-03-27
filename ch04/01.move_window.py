@@ -9,10 +9,10 @@ image[:] = 200  # 슬라이스 연산자로 행렬원소 값 지정 (모든 곳�
 title1, title2 = 'position1', 'position2'  # 윈도우 이름
 cv2.namedWindow(title1, cv2.WINDOW_AUTOSIZE)  # 윈도우 생성 및 크기 조정 옵션
 cv2.namedWindow(title2)
-cv2.moveWindow(title1, 150, 150)        # 윈도우 이동 - 위치 지정
+cv2.moveWindow(title1, 150, 150)        # 윈도우 이동 - 위치 지정 _원점(좌측 상단)으로 부터 이동거리
 cv2.moveWindow(title2, 400, 50)
 
 cv2.imshow(title1, image)  # 행렬원소(회색바탕)을 영상으로 표시
 cv2.imshow(title2, image)
-cv2.waitKey(0)   # 키 이벤트 대기 (안하면 바로 화면 생성되었다가 꺼지는 상황발생)
+cv2.waitKey(0)   # 키 이벤트 대기 (안하면 바로 화면 생성 되었다가 꺼지는 상황발생) 사용자가 어떤 액션을 하면 넘어감
 cv2.destroyAllWindows() #열린 모든 윈도우 파괴
